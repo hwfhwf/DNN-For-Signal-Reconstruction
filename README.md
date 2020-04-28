@@ -116,6 +116,6 @@ sio.savemat('Xx_round.mat', mdict={'Xx_round':X})       #put reconstructed signa
 [Network parameters (.pkl file)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>
 [Reconstruct Signal (.mat file for MATLAB)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>   
 [DNN_training_testing]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DNN_training_testing.py>
-[DNN]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction>
+[DNN for Signal Reconstruction]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction>
 [Deep Neural Network-Based Quantizied Signal Reconsruction for DOA Estimation]: <论文网址>
  
