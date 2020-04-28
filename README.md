@@ -1,4 +1,4 @@
-# [DNN]
+# [DNN for Signal Reconstruction]
 # [Deep Neural Network-Based Quantizied Signal Reconsruction for DOA Estimation]
 
 ## Training and Testing
