@@ -1,20 +1,42 @@
 # [DNN]
-
+# [Deep Neural Network-Based Quantizied Signal Reconsruction for DOA Estimation]
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+## Training and Testing
+  - [DNN_training_testing]
 
-  - Type some Markdown on the left
-  - See HTML in the right
-  - Magic
+## Output Data for DOA Estimation
+  - [Reconstructed Signal (.mat file for MATLAB)]
 
-# New Features!
+## Guidance for Training
+### Data Initialization
+```python
+data=sio.loadmat('matlab.mat')         # load training data, locate dataset in ../dataset
+data1=sio.loadmat('testset.mat')       # load test data
 
-  - Import a HTML file and watch it magically convert to Markdown
-  - Drag and drop images (requires your Dropbox account be linked)
+LSB=2/2**1                             # LSB is resolution of B-bit ADC
+x_IF=data['Xx']                        # training data
+testset=data1['Xx']                    # testing data
 
+testset=np.concatenate([np.real(testset),np.imag(testset)],0)     #seperate complex signals
+testset_sampled=np.round((testset)/LSB)*LSB                       #quantize the signal
+testset=testset.T
+testset_sampled=torch.Tensor(testset_sampled.T).view(-1,1,1,64).to(device)
 
+x_IF=np.concatenate([np.real(x_IF),np.imag(x_IF)],0)
+x_IF_sampled=np.round((x_IF)/LSB)*LSB
+
+loss_init=((x_IF-x_IF_sampled)**2).mean()*1e4
+num_data=x_IF_sampled.shape[1]                                   #signals' number
+num_antenna=x_IF_sampled.shape[0]                                #number of antennas
+
+x_IF=torch.Tensor(x_IF.T)                                        #transform numpy data to tensor
+x_IF_sampled=torch.Tensor(x_IF_sampled.T).view(num_data,1,1,num_antenna)
+batch_size=256
+dataset = Data.TensorDataset(x_IF_sampled, x_IF) 
+data_iter = Data.DataLoader(dataset, batch_size, shuffle=True)   #data have prepared
+```
 You can also:
   - Import and save files from GitHub, Dropbox, Google Drive and One Drive
   - Drag and drop markdown and HTML files into Dillinger
@@ -157,7 +179,10 @@ MIT
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
+   [Reconstructed Signal (.mat file for MATLAB)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>
+   [DNN_training_testing]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DNN_training_testing.py>
    [DNN]: <https://github.com/joemccann/dillinger>
+   [Deep Neural Network-Based Quantizied Signal Reconsruction for DOA Estimation]: <https://github.com/joemccann/dillinger>
    [dill]: <https://github.com/joemccann/dillinger>
    [git-repo-url]: <https://github.com/joemccann/dillinger.git>
    [john gruber]: <http://daringfireball.net>
