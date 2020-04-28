@@ -103,19 +103,19 @@ sio.savemat('Xx_round.mat', mdict={'Xx_round':X})       #put reconstructed signa
 #### dataset/[Xx_round.mat] : Reconstructed signal
 
 
-[DNN_training_testing.py]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DNN_training_testing.py>
-[output.py]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>
-[MyDNN.pkl]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/MyDNN.pkl>
-[music.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DOA-via-MATLAB/music.m>
-[creat_data.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DOA-via-MATLAB/creat_data.m>
-[creat_figure.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DOA-via-MATLAB/creat_figure.m>
-[matlab.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/dataset/matlab.mat>
-[testset.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/dataset/testset.mat>
-[test.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/dataset/test.mat>
-[Xx_round.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/dataset/Xx_round.mat>   
-[Network parameters (.pkl file)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>
-[Reconstruct Signal (.mat file for MATLAB)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/output.py>   
-[DNN_training_testing]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction/blob/master/DNN_training_testing.py>
-[DNN for Signal Reconstruction]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstrction>
+[DNN_training_testing.py]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/DNN_training_testing.py>
+[output.py]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/output.py>
+[MyDNN.pkl]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/MyDNN.pkl>
+[music.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/DOA-via-MATLAB/music.m>
+[creat_data.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/DOA-via-MATLAB/creat_data.m>
+[creat_figure.m]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/DOA-via-MATLAB/creat_figure.m>
+[matlab.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/dataset/matlab.mat>
+[testset.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/dataset/testset.mat>
+[test.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/dataset/test.mat>
+[Xx_round.mat]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/dataset/Xx_round.mat>   
+[Network parameters (.pkl file)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/output.py>
+[Reconstruct Signal (.mat file for MATLAB)]:<https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/output.py>   
+[DNN_training_testing]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstruction/blob/master/DNN_training_testing.py>
+[DNN for Signal Reconstruction]: <https://github.com/hwfhwf/DNN-For-Signal-Reconstruction>
 [Deep Neural Network-Based Quantizied Signal Reconsruction for DOA Estimation]: <论文网址>
  
