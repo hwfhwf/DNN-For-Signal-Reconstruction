@@ -5,7 +5,7 @@
   - [DNN_training_testing]
 
 ## Output Data for DOA Estimation
-  - [Reconstruct Signal (output .mat file for MATLAB)]
+  - [Reconstruct Signal (.mat file for MATLAB)]
 
 ## Workflow for Reconstruction and performance test
 ### 1.Data Initialization
